@@ -92,10 +92,10 @@
         <text>8</text>
       </controlProperties>
     </control>
-    <control controlID="18" controlTypeID="com.balsamiq.mockups::ButtonBar" x="442" y="173" w="-1" h="-1" measuredW="206" measuredH="27" zOrder="14" locked="false" isInGroup="-1">
+    <control controlID="18" controlTypeID="com.balsamiq.mockups::ButtonBar" x="487" y="177" w="-1" h="-1" measuredW="116" measuredH="27" zOrder="14" locked="false" isInGroup="-1">
       <controlProperties>
         <selectedIndex>0</selectedIndex>
-        <text>Rate%20%26%20Weight%2C%20Direct%20Entry</text>
+        <text>Out%20of%2010%2C%20%25</text>
       </controlProperties>
     </control>
   </controls>
