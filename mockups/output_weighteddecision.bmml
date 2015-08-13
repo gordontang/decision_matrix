@@ -1,0 +1,69 @@
+<mockup version="1.0" skin="sketch" fontFace="Balsamiq Sans" measuredW="901" measuredH="586" mockupW="711" mockupH="570">
+  <controls>
+    <control controlID="0" controlTypeID="com.balsamiq.mockups::BrowserWindow" x="190" y="16" w="711" h="570" measuredW="450" measuredH="400" zOrder="0" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Decision%20Matrix%0Ahttp%3A//</text>
+      </controlProperties>
+    </control>
+    <control controlID="6" controlTypeID="com.balsamiq.mockups::SubTitle" x="419" y="135" w="-1" h="-1" measuredW="257" measuredH="27" zOrder="1" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Score%20your%20alternatives.</text>
+      </controlProperties>
+    </control>
+    <control controlID="11" controlTypeID="__group__" x="190" y="87" w="710" h="32" measuredW="710" measuredH="32" zOrder="2" locked="false" isInGroup="-1">
+      <groupChildrenDescriptors>
+        <control controlID="0" controlTypeID="com.balsamiq.mockups::Canvas" x="0" y="0" w="710" h="32" measuredW="100" measuredH="70" zOrder="0" locked="false" isInGroup="11">
+          <controlProperties>
+            <color>14540253</color>
+          </controlProperties>
+        </control>
+        <control controlID="1" controlTypeID="com.balsamiq.mockups::Label" x="282" y="6" w="-1" h="-1" measuredW="120" measuredH="21" zOrder="1" locked="false" isInGroup="11">
+          <controlProperties>
+            <text>Deciding%20on%20an%20oven</text>
+          </controlProperties>
+        </control>
+      </groupChildrenDescriptors>
+    </control>
+    <control controlID="12" controlTypeID="com.balsamiq.mockups::DataGrid" x="365" y="223" w="-1" h="-1" measuredW="373" measuredH="187" zOrder="3" locked="false" isInGroup="-1">
+      <controlProperties>
+        <selectedIndex>4</selectedIndex>
+        <text>Criteria%2C%20Weightings%2C%20Toaster%5CrOven%2C%20Pressure%5CrCooker%2C%20%7Bcolor%3Ared%7DMicrowave%7Bcolor%7D%0AFast%2C%2029%25%2C%208%2C%207%2C%2010%0AHealthy%2C%2029%25%2C%209%2C%2010%2C%205%0AAdaptable%2C%2020%25%2C%207%2C%206%2C%209%0ACost%20effective%2C%2022%25%2C%208%2C%206%2C%2010%0A*Totals*%2C%20100%25%2C%20*283*%2C%20*260*%2C%20*%7Bcolor%3Ared%7D293%7Bcolor%7D*%0A%7B65L%2C%200C%2C%200C%2C%200C%2C%200C%7D</text>
+      </controlProperties>
+    </control>
+    <control controlID="13" controlTypeID="com.balsamiq.mockups::Label" x="401" y="170" w="-1" h="-1" measuredW="289" measuredH="21" zOrder="4" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Rate%20alternatives%20against%20each%20criteria%20from%200-10.</text>
+      </controlProperties>
+    </control>
+    <control controlID="14" controlTypeID="com.balsamiq.mockups::Label" x="400" y="425" w="-1" h="-1" measuredW="295" measuredH="24" zOrder="5" locked="false" isInGroup="-1">
+      <controlProperties>
+        <bold>true</bold>
+        <color>13576743</color>
+        <size>16</size>
+        <text>Your%20best%20alternative%20is%20the%20Microwave%21</text>
+      </controlProperties>
+    </control>
+    <control controlID="15" controlTypeID="com.balsamiq.mockups::Button" x="482" y="516" w="83" h="24" measuredW="77" measuredH="27" zOrder="6" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Export%20to</text>
+      </controlProperties>
+    </control>
+    <control controlID="16" controlTypeID="com.balsamiq.mockups::ComboBox" x="563" y="516" w="-1" h="-1" measuredW="58" measuredH="24" zOrder="7" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>CSV</text>
+      </controlProperties>
+    </control>
+    <control controlID="18" controlTypeID="com.balsamiq.mockups::Label" x="484" y="194" w="-1" h="-1" measuredW="123" measuredH="21" zOrder="8" locked="false" isInGroup="-1">
+      <controlProperties>
+        <italic>true</italic>
+        <text>10%20is%20best%2C%200%20is%20worst</text>
+      </controlProperties>
+    </control>
+    <control controlID="19" controlTypeID="com.balsamiq.mockups::Paragraph" x="391" y="462" w="343" h="35" measuredW="275" measuredH="80" zOrder="9" locked="false" isInGroup="-1">
+      <controlProperties>
+        <align>center</align>
+        <text>The%20toaster%20oven%20could%20also%20be%20a%20good%20choice.%0A_Remember%2C%20these%20scores%20and%20weightings%20are%20subjective._</text>
+      </controlProperties>
+    </control>
+  </controls>
+</mockup>
