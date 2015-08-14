@@ -1,11 +1,13 @@
 Rails.application.routes.draw do
 
+  get 'decisions/new'
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
   # root 'welcome#index'
-  root              'static_pages#home'
+  root              'decisions#new'
   get  'about'   => 'static_pages#about'
 
   # Example of regular route:
@@ -28,6 +30,8 @@ Rails.application.routes.draw do
   #       get 'sold'
   #     end
   #   end
+
+  #resources :decision
 
   # Example resource route with sub-resources:
   #   resources :products do
