@@ -11,7 +11,7 @@ class DecisionsController < ApplicationController
   def create
   	@decision = Decision.new(decision_params)
   	if @decision.save
-  		redirect_to root_url
+  		redirect_to about_url ### Not final! Change to next input phase
   	else
   		render 'new'
   	end

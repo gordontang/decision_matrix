@@ -6,5 +6,4 @@ class DecisionsControllerTest < ActionController::TestCase
     assert_response :success
     assert_select "title", "Start | Decision Matrix"
   end
-
 end
