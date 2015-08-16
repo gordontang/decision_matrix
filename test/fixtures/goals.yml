@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  rank: 1
+  weight: 9.99
+  decision_id: 
+
+two:
+  name: MyString
+  rank: 1
+  weight: 9.99
+  decision_id: 
