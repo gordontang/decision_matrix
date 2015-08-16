@@ -3,7 +3,7 @@ require 'test_helper'
 class AlternativeTest < ActiveSupport::TestCase
   def setup
   	@decision = decisions(:oven)
-  	@alternative = @decision.alternatives.build(name: 'microwave')
+  	@alternative = @decision.alternatives.build(name: 'Microwave')
 	end
 
 	test "should be valid" do

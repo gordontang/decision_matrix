@@ -11,13 +11,14 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150816182923) do
+ActiveRecord::Schema.define(version: 20150816210640) do
 
   create_table "alternatives", force: :cascade do |t|
     t.string   "name"
     t.integer  "decision_id"
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
+    t.decimal  "score"
   end
 
   add_index "alternatives", ["decision_id"], name: "index_alternatives_on_decision_id"
