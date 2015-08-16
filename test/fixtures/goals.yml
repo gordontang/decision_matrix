@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+safe:
+  name: safe
+  constraint: true
+  rank: 1
+  weight: 9.99
+  decision_id: 1
+
+fast:
+  name: fast
+  constraint: false
+  rank: 1
+  weight: 9.99
+  decision_id: 1

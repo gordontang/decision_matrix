@@ -21,9 +21,10 @@ class DecisionTest < ActiveSupport::TestCase
 
   test "associated decision data should be destroyed" do
   	@decision.save
-  	@decision.alternatives.create!(name: "sample")
-  	assert_difference 'Alternative.count', -1 do
-  		@decision.destroy
-  	end
+    @decision.alternatives.create!(name: "toaster")
+    @decision.goals.create!(name: "fast")
+    assert_difference ['Alternative.count','Goal.count'], -1 do
+        @decision.destroy
+    end
   end
 end
