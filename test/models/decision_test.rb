@@ -18,4 +18,12 @@ class DecisionTest < ActiveSupport::TestCase
     @decision.name = "a" * 51
     assert_not @decision.valid?
   end
+
+  test "associated decision data should be destroyed" do
+  	@decision.save
+  	@decision.alternatives.create!(name: "sample")
+  	assert_difference 'Alternative.count', -1 do
+  		@decision.destroy
+  	end
+  end
 end

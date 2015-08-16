@@ -1,9 +1,16 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
-one:
-  name: MyString
-  decision_id: 
+toaster:
+  name: Toaster
+#  decision_id: 1
+  decision: oven
 
-two:
-  name: MyString
-  decision_id: 
+microwave:
+  name: Microwave
+#  decision_id: 1
+  decision: oven
+
+pressurecooker:
+  name: Pressure cooker
+#  decision_id: 1
+  decision: oven
