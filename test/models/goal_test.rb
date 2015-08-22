@@ -2,22 +2,22 @@ require 'test_helper'
 
 class GoalTest < ActiveSupport::TestCase
   def setup
-      @decision = decisions(:oven)
-      @goal = @decision.goals.build(name: 'Reliable')
-    end
+    @decision = decisions(:oven)
+    @goal = @decision.goals.build(name: 'Reliable')
+  end
 
-    test "should be valid" do
-        assert @goal.valid?
-    end
+  test "should be valid" do
+    assert @goal.valid?
+  end
 
-    test "decision id should be present" do
-        @goal.decision_id = nil
-        assert_not @goal.valid?
-    end
+  test "decision id should be present" do
+    @goal.decision_id = nil
+    assert_not @goal.valid?
+  end
 
-    test "name should be present" do
-      @goal.name = "   "
-      assert_not @goal.valid?
+  test "name should be present" do
+    @goal.name = "   "
+    assert_not @goal.valid?
   end
 
   test "name should not be too long" do
@@ -26,8 +26,8 @@ class GoalTest < ActiveSupport::TestCase
   end
 
   test "constraint should be present" do
-      @goal.constraint = nil
-      assert_not @goal.valid?
+    @goal.constraint = nil
+    assert_not @goal.valid?
   end
 
   # test "constraint should be boolean" do
@@ -50,17 +50,22 @@ class GoalTest < ActiveSupport::TestCase
   	assert @goal.valid?
   end
 
-  test "weight should be in range" do
-  	@goal.weight = -100
+  test "weight should not be < 0" do
+  	@goal.weight = -1
   	assert_not @goal.valid?
   end
 
-  test "weight >=0 is valid" do
+  test "weight should not be > 1" do
+  	@goal.weight = 2
+  	assert_not @goal.valid?
+  end
+
+  test "weight >= 0 is valid" do
   	@goal.weight = 0.1
   	assert @goal.valid?
   end
 
-  test "weight <=1 is valid" do
+  test "weight <= 1 is valid" do
   	@goal.weight = 1
   	assert @goal.valid?
   end

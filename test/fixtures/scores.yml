@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  rating: 1
+  value: 9.99
+  decision_id: 
+  goal_id: 
+  alternative_id: 
+
+two:
+  rating: 1
+  value: 9.99
+  decision_id: 
+  goal_id: 
+  alternative_id: 

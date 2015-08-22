@@ -1,5 +1,6 @@
 class Goal < ActiveRecord::Base
   belongs_to :decision
+  has_many :scores, dependent: :destroy
   validates :decision_id, presence: true
   validates :name, presence: true, length: { maximum: 50 }
   validates :constraint, inclusion: [true, false]
