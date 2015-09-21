@@ -1,1 +1,66 @@
-Making a decision on <%= @decision.name %>
+<% provide(:title, @decision.name) %>
+
+<div class="row">
+
+  <aside class="col-md-4">
+    <section class="decision_info">
+			<span>Deciding on:</span>
+			<h1>
+				<%= @decision.name %>
+			</h1>
+			<span>Alternatives: <%= @decision.alternatives.count %></span>
+			<span>Goals: <%= @decision.goals.count %></span>
+			<span>Scores: <%= @decision.scores.count %></span>
+		</section>
+  </aside>
+
+
+	<div class="col-md-8">
+    <% if @decision.alternatives.any? %>
+      <h3>Alternatives (<%= @decision.alternatives.count %>)</h3>
+      <ol class="alternatives">
+        <%= render @alternatives %>
+      </ol>
+      <%= will_paginate @alternatives %>
+    <% end %>
+  </div>
+
+
+	<div class="col-md-8">
+	    <% if @decision.goals.any? %>
+	      <h3>Goals (<%= @decision.goals.count %>)</h3>
+	      <ol class="goals">
+	        <%= render @goals %>
+	      </ol>
+	      <%= will_paginate @goals %>
+	    <% end %>
+	  </div>
+	</div>
+
+	<div class="col-md-8">
+	    <% if @decision.scores.any? %>
+	      <h3>Scores (<%= @decision.scores.count %>)</h3>
+	      <ol class="scores">
+	        <%= render @scores %>
+	      </ol>
+	      <%= will_paginate @scores %>
+	    <% end %>
+	  </div>
+	</div>
+
+</div>
+
+<!-- <div class="row">
+  	<div class="col-md-6 col-md-offset-3">
+			<h2>Alternatives</h2>
+			<% if @decision.alternatives.any? %>
+				<ul>
+					<% @decision.alternatives.each do |alternative| %>
+						<li><%= link_to alternative.name, alternative %></li>
+					<% end %>
+				</ul>
+			<% else %>
+				<p>No alternatives</p>
+			<% end %>
+	</div>
+</div> -->

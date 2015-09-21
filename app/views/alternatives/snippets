@@ -1,0 +1,12 @@
+<% if false %>
+  		<%= form_for @survey do |f| %>
+			  <%= render 'shared/error_messages' %>
+
+			  <%= f.fields_for :alternatives do |builder| %>
+			    <%= render "alternative_fields", :f => builder %>
+			  <% end %>
+			  <p><%= f.submit "Next ->" %></p>
+			  <%= link_to "Add Another", "#add", :id => "add-another" %>
+			<% end %>
+
+<% end %>

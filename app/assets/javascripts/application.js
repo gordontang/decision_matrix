@@ -14,3 +14,17 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require_tree .
+
+$(document).ready(function() {
+  $('a#add-another').click(function() {
+    $('#alternative-list li:first').clone().find('input').val('')
+    .end().appendTo('#alternative-list');
+  });
+
+  $('.delete-alternative').live('click', function() {
+    if ($('#alternative-list li').length > 1)
+  $(this).parent().remove();
+    else
+  alert('You need at least one alternative.')
+  });
+});

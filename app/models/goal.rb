@@ -10,4 +10,6 @@ class Goal < ActiveRecord::Base
   validates :weight, numericality: {greater_than_or_equal_to: 0,
   																	less_than_or_equal_to: 1},
   										allow_blank: true
+
+	accepts_nested_attributes_for :scores, :reject_if => lambda { |a| a[:content].blank? }, :allow_destroy => true
 end

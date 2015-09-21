@@ -10,7 +10,20 @@ microwave:
 #  decision_id: 1
   decision: oven
 
-pressurecooker:
+pressure_cooker:
   name: Pressure cooker
-#  decision_id: 1
   decision: oven
+
+tabby:
+  name: Tabby
+  decision: cat
+
+tiger:
+  name: Tiger
+  decision: cat
+
+<% 30.times do |n| %>
+alternative_<%= n %>:
+  name: <%= Faker::Lorem.word %>
+  decision: oven
+<% end %>

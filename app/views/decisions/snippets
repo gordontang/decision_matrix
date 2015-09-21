@@ -1,0 +1,27 @@
+<div class="row">
+		<div class="col-md-6 col-md-offset-3">
+			<%= form_for(setup_decision(@decision)) do |f| %>
+				<%= render 'shared/error_messages' %>
+			  Name: <%= f.text_field :name %>
+			  <%= f.fields_for :alternatives do |ff| %>
+			      Alternative: <%= ff.text_field :name %>
+			      Remove: <%= ff.check_box :_destroy, {:checked => ff.object.persisted?}, '0', '1' %>
+			    	<br>
+			  <% end %>
+			  <p><%= f.submit "Next >" %></p>
+			<% end %>
+		</div>
+	</div>
+
+
+<% if false %>
+	<div class="row">
+  	<div class="col-md-6 col-md-offset-3">
+		<%= form_for(@decision) do |f| %>
+
+      <%= f.text_field :name, class: 'form-control' %>
+      <%= f.submit "Next >", class: "btn btn-primary" %>
+		<% end %>
+		</div>
+	</div>
+<% end %>

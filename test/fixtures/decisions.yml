@@ -5,3 +5,12 @@ oven:
 
 phone:
   name: Phone
+
+dog:
+  name: Dog
+
+cat:
+  name: Cat
+
+pan:
+  name: Pan
