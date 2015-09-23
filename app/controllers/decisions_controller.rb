@@ -12,22 +12,12 @@ class DecisionsController < ApplicationController
 	def create
 	  @decision = Decision.new(decision_params)
 	  if @decision.save
-	    flash[:notice] = "Successfully created decision."
+	    flash[:success] = "Successfully created decision."
 	    redirect_to @decision
 	  else
 	    render 'new'
 	  end
 	end
-
-	  # def create
-	  # 	@decision = Decision.new(decision_params)
-	  # 	if @decision.save
-	  # 		flash[:notice] = "Successfully created project."
-	  # 		redirect_to decisions_path ### Not final! Change to next input phase
-	  # 	else
-	  # 		render 'new'
-	  # 	end
-	  # end
 
 	def update
 		@decision = Decision.find(params[:id])

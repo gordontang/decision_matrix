@@ -1,15 +1,25 @@
 Rails.application.routes.draw do
 
+  root                        'decisions#new'
+  get    'about'           => 'static_pages#about'
+  get    'login'           => 'sessions#new'
+  post   'login'           => 'sessions#create'
+  delete 'logout'          => 'sessions#destroy'
+  # get  'alternatives_path' => 'alternatives#new'
+  # get  'goals_path'        => 'goals#new'
+  # get  'scores_path'       => 'scores#new'
+
+  resources :decisions
+  resources :alternatives
+  resources :goals
+  resources :scores
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
   # root 'welcome#index'
-  root                        'decisions#new'
-  get  'about'             => 'static_pages#about'
-  # get  'alternatives_path' => 'alternatives#new'
-  # get  'goals_path'        => 'goals#new'
-  # get  'scores_path'       => 'scores#new'
+
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
@@ -31,11 +41,6 @@ Rails.application.routes.draw do
   #       get 'sold'
   #     end
   #   end
-
-  resources :decisions
-  resources :alternatives
-  resources :goals
-  resources :scores
 
   # Example resource route with sub-resources:
   #   resources :products do
