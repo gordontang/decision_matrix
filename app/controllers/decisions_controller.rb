@@ -7,11 +7,10 @@ class DecisionsController < ApplicationController
 
 	def new
 		@decision = Decision.new
-		# 3.times { @decision.alternatives.build }
 	end
 
 	def create
-	  @decision = Decision.new(params[:decision])
+	  @decision = Decision.new(decision_params)
 	  if @decision.save
 	    flash[:notice] = "Successfully created decision."
 	    redirect_to decisions_path

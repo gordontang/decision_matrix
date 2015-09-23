@@ -3,7 +3,7 @@ require 'test_helper'
 class DecisionsControllerTest < ActionController::TestCase
 
   def setup
-  	@decision = Decision.new(name: "example dec")
+  	@decision = Decision.new(name: "oven")
   end
 
   test "should get new" do

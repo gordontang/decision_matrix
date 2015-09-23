@@ -1,8 +1,9 @@
 require 'test_helper'
 
 class AlternativesControllerTest < ActionController::TestCase
-  def setup
 
+  def setup
+  	@alternative = alternatives(:toaster)
   end
 
   test "should get new" do
