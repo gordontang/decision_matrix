@@ -13,7 +13,7 @@ class DecisionsController < ApplicationController
 	  @decision = Decision.new(decision_params)
 	  if @decision.save
 	    flash[:notice] = "Successfully created decision."
-	    redirect_to decisions_path
+	    redirect_to @decision
 	  else
 	    render 'new'
 	  end
