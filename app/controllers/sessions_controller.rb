@@ -7,7 +7,7 @@ class SessionsController < ApplicationController
     if decision
         log_in decision
         #params[:session][:remember_me] == '1' ? remember(decision) : forget(decision)
-        redirect_back_or decision
+        redirect_to decision #redirect_back_or decision
     else
       flash.now[:danger] = 'Invalid name'
       render 'new'
@@ -15,8 +15,8 @@ class SessionsController < ApplicationController
   end
 
   def destroy
-  	# log_out if logged_in?
-  	# redirect_to root_url
+  	log_out if logged_in?
+  	redirect_to root_url
   end
 
 end
