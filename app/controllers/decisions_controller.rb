@@ -20,9 +20,14 @@ class DecisionsController < ApplicationController
 	  end
 	end
 
+	def edit
+    @decision = Decision.find(params[:id])
+  end
+
 	def update
 		@decision = Decision.find(params[:id])
-		if @decision.update(params[:decision])
+		if @decision.update_attributes(decision_params)
+			flash[:success] = "Decision updated"
 			redirect_to @decision
 		else
 			render 'edit'
