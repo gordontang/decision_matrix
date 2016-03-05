@@ -13,7 +13,7 @@ class DecisionsController < ApplicationController
 	  @decision = Decision.new(decision_params)
 	  if @decision.save
 	  	log_in @decision
-	    flash[:success] = "Successfully created decision."
+	    flash[:success] = "Success! Created a new decision."
 	    redirect_to @decision
 	  else
 	    render 'new'
