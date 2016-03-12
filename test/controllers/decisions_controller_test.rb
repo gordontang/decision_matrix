@@ -13,13 +13,15 @@ class DecisionsControllerTest < ActionController::TestCase
     assert_select "title", "Start | Decision Matrix"
   end
 
-  # test "associated alternatives should be destroyed" do
-  # 	@decision.save
-  # 	@decision.alternatives.create!(name: "alt 1")
-  # 	assert_difference 'Alternative.count', -1 do
-  # 		@decision.destroy
-  # 	end
-  # end
+  test "should destroy Decision and related objects" do
+    @decision.save
+    assert_response :success
+    assert_difference 'Decision.count', -1 do
+      assert_difference 'Alternative.count', -@decision.alternatives.count do
+        @decision.destroy
+      end
+    end
+  end
 
   # test "should redirect index when not logged in" do
   #   get :index
