@@ -3,7 +3,7 @@ class SessionsController < ApplicationController
   end
 
   def create
-    decision = Decision.find_by(name: params[:session][:name])
+    decision = Decision.find_by(id: params[:session][:id])
     if decision
         log_in decision
         #params[:session][:remember_me] == '1' ? remember(decision) : forget(decision)

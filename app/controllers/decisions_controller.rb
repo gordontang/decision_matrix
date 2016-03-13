@@ -4,6 +4,7 @@ class DecisionsController < ApplicationController
 		@decision = Decision.find(params[:id])
 		@alternatives = @decision.alternatives.paginate(page: params[:page])
 		@goals = @decision.goals.paginate(page: params[:page])
+		@scores = @decision.scores.paginate(page: params[:page])
 	end
 
 	def new

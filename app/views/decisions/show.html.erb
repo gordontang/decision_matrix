@@ -9,7 +9,7 @@
 				<%= @decision.name %>
 				<%= link_to "(edit)", edit_decision_path(@decision) %>
 			</h1>
-			
+
 
 			<span>Alternatives: <%= @decision.alternatives.count %></span>
 			<span>Goals: <%= @decision.goals.count %></span>
@@ -34,9 +34,7 @@
       </ol>
       <%= will_paginate @goals %>
     <% end %>
-  </div>
 
-	<div class="col-md-8">
     <% if @decision.scores.any? %>
       <h3>Scores (<%= @decision.scores.count %>)</h3>
       <ol class="scores">
