@@ -1,13 +1,16 @@
 Rails.application.routes.draw do
 
-  root                           'decisions#new'
-  get    'about'              => 'static_pages#about'
-  get    'login'              => 'sessions#new'
-  post   'login'              => 'sessions#create'
-  delete 'logout'             => 'sessions#destroy'
-  get    'alternatives_path'  => 'alternatives#new'
-  get    'goals_path'         => 'goals#new'
-  # get    'scores_path'        => 'scores#new'
+  root                              'decisions#new'
+  get    'about'               =>   'static_pages#about'
+  get    'login'               =>   'sessions#new'
+  post   'login'               =>   'sessions#create'
+  delete 'logout'              =>   'sessions#destroy'
+  get    'alternatives'        =>   'alternatives#new'
+  post   'alternatives'        =>   'alternatives#create'
+  get    'goals'               =>   'goals#new'
+  post   'goals'               =>   'goals#create'
+  get    'scores'              =>   'scores#new'
+  post   'scores'              =>   'scores#create'
 
   resources :decisions
   resources :alternatives
