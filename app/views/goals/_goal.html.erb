@@ -1,5 +1,5 @@
 <li id="goal-<%= goal.id %>">
-  <span class="name"><%= goal.name %></span>
+  <span class="name"><%= goal.name %> <%= link_to "(edit)", edit_goal_path(goal) %> <%= link_to "(remove)", goal, method: :delete %></span>
   <span class="timestamp">
     Created <%= time_ago_in_words(goal.created_at) %> ago.
   </span>

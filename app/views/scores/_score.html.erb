@@ -1,5 +1,5 @@
 <li id="score-<%= score.id %>">
-  <span class="name">Alternative: <%= Alternative.find_by(id: score.alternative_id.to_s).name %>, Criteria: <%= Goal.find_by(id: score.goal_id.to_s).name %></span>
+  <span class="name">Alternative: <%= Alternative.find_by(id: score.alternative_id.to_s).name %>, Criteria: <%= Goal.find_by(id: score.goal_id.to_s).name %> <%= link_to "(edit)", edit_score_path(score) %> <%= link_to "(remove)", score, method: :delete %></span>
   <span class="content">Value: <%= '%.0f' % score.value.to_s %></span>
   <span class="timestamp">
     Created <%= time_ago_in_words(score.created_at) %> ago.

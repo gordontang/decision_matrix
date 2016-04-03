@@ -19,9 +19,24 @@ class ScoresController < ApplicationController
   end
 
   def edit
+    @score = Score.find(params[:id])
+  end
+
+  def update
+    @score = Score.find(params[:id])
+    if @score.update_attributes(score_params)
+      flash[:success] = "Score updated"
+      redirect_to Decision.find(current_decision.id)
+    else
+      render 'edit'
+    end
   end
 
   def destroy
+  	@score = Score.find(params[:id])
+  	@score.destroy
+  	flash[:success] = "Score deleted"
+  	redirect_to Decision.find(current_decision.id)
   end
 
 

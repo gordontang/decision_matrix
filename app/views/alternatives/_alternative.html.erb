@@ -1,5 +1,5 @@
 <li id="alternative-<%= alternative.id %>">
-  <span class="name"><%= alternative.name %></span>
+  <span class="name"><%= alternative.name %> <%= link_to "(edit)", edit_alternative_path(alternative) %> <%= link_to "(remove)", alternative, method: :delete %></span>
   <span class="timestamp">
     Created <%= time_ago_in_words(alternative.created_at) %> ago.
   </span>

@@ -17,9 +17,24 @@ class AlternativesController < ApplicationController
   end
 
   def edit
+    @alternative = Alternative.find(params[:id])
+  end
+
+  def update
+    @alternative = Alternative.find(params[:id])
+    if @alternative.update_attributes(alternative_params)
+      flash[:success] = "Alternative updated"
+      redirect_to Decision.find(current_decision.id)
+    else
+      render 'edit'
+    end
   end
 
   def destroy
+    @alternative = Alternative.find(params[:id])
+    @alternative.destroy
+    flash[:success] = "Alternative deleted"
+    redirect_to Decision.find(current_decision.id)
   end
 
 

@@ -36,6 +36,15 @@ class DecisionsController < ApplicationController
 		end
 	end
 
+	def destroy
+		@decision = Decision.find(params[:id])
+		Alternative.find(params[:decision_id]).destroy
+		Goal.find(params[:decision_id]).destroy
+		Score.find(params[:decision_id]).destroy
+		@decision.destroy
+		flash[:success] = "Decision and its dependencies deleted"
+		redirect_to root_url
+	end
 
  private
 

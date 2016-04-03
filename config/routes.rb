@@ -7,10 +7,13 @@ Rails.application.routes.draw do
   delete 'logout'              =>   'sessions#destroy'
   get    'alternatives'        =>   'alternatives#new'
   post   'alternatives'        =>   'alternatives#create'
+  delete 'alternatives'        =>   'alternatives#destroy'
   get    'goals'               =>   'goals#new'
   post   'goals'               =>   'goals#create'
+  delete 'goals'               =>   'goals#destroy'
   get    'scores'              =>   'scores#new'
   post   'scores'              =>   'scores#create'
+  delete 'scores'              =>   'scores#destroy'
 
   resources :decisions
   resources :alternatives

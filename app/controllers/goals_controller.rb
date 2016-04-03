@@ -18,9 +18,24 @@ class GoalsController < ApplicationController
   end
 
   def edit
+    @goal = Goal.find(params[:id])
+  end
+
+  def update
+    @goal = Goal.find(params[:id])
+    if @goal.update_attributes(goal_params)
+      flash[:success] = "Goal updated"
+      redirect_to Decision.find(current_decision.id)
+    else
+      render 'edit'
+    end
   end
 
   def destroy
+    @goal = Goal.find(params[:id])
+    @goal.destroy
+    flash[:success] = "Goal deleted"
+    redirect_to Decision.find(current_decision.id)
   end
 
 
